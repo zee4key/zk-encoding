@@ -10,28 +10,28 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
-    title: "Build Brand Trust",
+    icon: "Code",
+    title: "Hands-on Learning",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Practice coding with real-world projects and interactive exercises. Learn by doing with our practical, project-based curriculum.",
   },
   {
-    icon: "LineChart",
-    title: "More Leads",
+    icon: "GraduationCap",
+    title: "Expert Mentorship",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Get guidance from experienced developers who provide personalized feedback and help you overcome coding challenges.",
   },
   {
-    icon: "Wallet",
-    title: "Higher Conversions",
+    icon: "Users",
+    title: "Supportive Community",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Join a thriving community of learners. Collaborate on projects, share knowledge, and grow together with peer programming.",
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    icon: "Rocket",
+    title: "Career Growth",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Build a professional portfolio, gain industry-relevant skills, and prepare for real development roles with our structured path.",
   },
 ];
 
@@ -46,9 +46,7 @@ export const BenefitsSection = () => {
             Your Shortcut to Success
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+            A very fast way to adapt to any programming languages
           </p>
         </div>
 

@@ -23,55 +23,53 @@ interface ReviewProps {
   comment: string;
   rating: number;
 }
-
 const reviewList: ReviewProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe",
+    image: "https://avatars.githubusercontent.com/u/75042455?v=4",
+    name: "Azamat Yerzhanov",
     userName: "Product Manager",
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "ZK Coding Academy is fantastic! The courses are well-structured and the instructors are very knowledgeable. I've learned so much about programming.",
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
+    image: "https://avatars.githubusercontent.com/u/75042455?v=4",
+    name: "Aizhan Nurmagambetova",
     userName: "Cybersecurity Analyst",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
+      "The LMS platform at ZK Coding Academy is user-friendly and the content is top-notch. It's been a great experience learning here.",
     rating: 4.8,
   },
-
   {
-    image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
+    image: "https://avatars.githubusercontent.com/u/75042455?v=4",
+    name: "Yerlan Kabulov",
     userName: "Chief Technology Officer",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "ZK Coding Academy offers a wide range of programming courses that are perfect for both beginners and advanced learners. Highly recommend!",
     rating: 4.9,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
+    image: "https://avatars.githubusercontent.com/u/75042455?v=4",
+    name: "Nurbol Sarsenbayev",
     userName: "Data Scientist",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "I've taken several courses at ZK Coding Academy and each one has been excellent. The hands-on projects really help solidify the concepts.",
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
+    image: "https://avatars.githubusercontent.com/u/75042455?v=4",
+    name: "Aigerim Zhakypova",
     userName: "IT Project Manager",
     comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
+      "The support from the instructors at ZK Coding Academy is amazing. They are always available to help and provide valuable feedback.",
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
+    image: "https://avatars.githubusercontent.com/u/75042455?v=4",
+    name: "Madina Tuleubayeva",
     userName: "DevOps Engineer",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "ZK Coding Academy has been a game-changer for my career. The skills I've learned here have helped me advance in my job.",
     rating: 4.9,
   },
 ];

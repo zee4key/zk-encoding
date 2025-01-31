@@ -10,40 +10,40 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "Code",
+    title: "Interactive Coding Lessons",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Learn programming through hands-on, interactive coding exercises tailored for beginners and advanced learners.",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "Code",
+    title: "Real-world Coding Challenges",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Practice solving practical coding problems that simulate real software development scenarios.",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "Code",
+    title: "Comprehensive Curriculum",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Access a wide range of programming languages and technologies with structured, in-depth learning paths.",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "Code",
+    title: "Video Tutorials",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Watch expert-led video tutorials that break down complex programming concepts into easy-to-understand segments.",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "Code",
+    title: "Progress Tracking",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Monitor your learning progress, earn badges, and track your skill development in real-time.",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
+    icon: "Users",
+    title: "Community Support",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Connect with fellow learners, collaborate on projects, and get help from experienced developers.",
   },
 ];
 

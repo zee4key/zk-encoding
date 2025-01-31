@@ -1,42 +1,36 @@
 "use client";
 
-import { Icon } from "@/components/ui/icon";
 import { Marquee } from "@devnomic/marquee";
 import "@devnomic/marquee/dist/index.css";
-import { icons } from "lucide-react";
+import { FaMicrosoft, FaGoogle } from "react-icons/fa";
+
 interface sponsorsProps {
-  icon: string;
+  logo: JSX.Element;
   name: string;
 }
 
 const sponsors: sponsorsProps[] = [
   {
-    icon: "Crown",
-    name: "Acmebrand",
+    logo: <FaMicrosoft size={32} />,
+    name: "Microsoft",
   },
   {
-    icon: "Vegan",
-    name: "Acmelogo",
+    logo: <FaGoogle size={32} />,
+    name: "Google",
+  },
+
+  {
+    logo: <FaMicrosoft size={32} />,
+    name: "Microsoft Cloud",
   },
   {
-    icon: "Ghost",
-    name: "Acmesponsor",
+    logo: <FaGoogle size={32} />,
+    name: "Google Cloud",
   },
+
   {
-    icon: "Puzzle",
-    name: "Acmeipsum",
-  },
-  {
-    icon: "Squirrel",
-    name: "Acme",
-  },
-  {
-    icon: "Cookie",
-    name: "Accmee",
-  },
-  {
-    icon: "Drama",
-    name: "Acmetech",
+    logo: <FaMicrosoft size={32} />,
+    name: "Microsoft Azure",
   },
 ];
 
@@ -54,18 +48,13 @@ export const SponsorsSection = () => {
           innerClassName="gap-[3rem]"
           pauseOnHover
         >
-          {sponsors.map(({ icon, name }) => (
+          {sponsors.map(({ logo, name }) => (
             <div
               key={name}
               className="flex items-center text-xl md:text-2xl font-medium"
             >
-              <Icon
-                name={icon as keyof typeof icons}
-                size={32}
-                color="white"
-                className="mr-2"
-              />
-              {name}
+              {logo}
+              <span className="ml-2">{name}</span>
             </div>
           ))}
         </Marquee>

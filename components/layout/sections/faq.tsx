@@ -13,32 +13,33 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "What is the best programming language to start with?",
+    answer:
+      "It depends on your goals, but Python is often recommended for beginners due to its readability and simplicity.",
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
+    question: "How long does it take to learn programming?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "The time it takes to learn programming varies greatly depending on the individual and the amount of time dedicated to learning. On average, it can take several months to a year to become proficient.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
+    question: "Do I need a computer science degree to become a programmer?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+      "No, a computer science degree is not required to become a programmer. Many successful programmers are self-taught or have completed coding bootcamps.",
     value: "item-3",
   },
   {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "What resources are available for learning programming?",
+    answer:
+      "There are many resources available, including online courses, tutorials, books, and coding bootcamps.",
     value: "item-4",
   },
   {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
+    question: "How do I stay motivated while learning programming?",
+    answer:
+      "Setting small, achievable goals, working on projects that interest you, and joining a community of learners can help you stay motivated.",
     value: "item-5",
   },
 ];

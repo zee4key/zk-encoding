@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 enum PopularPlan {
   NO = 0,
@@ -25,48 +26,47 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: "Starter",
     popular: 0,
     price: 0,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+    description: "Perfect for beginners learning to code",
+    buttonText: "Start Learning",
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      "Access to basic coding courses",
+      "Community forum access",
+      "Weekly coding challenges",
+      "Beginner programming resources",
+      "Limited AI code review",
     ],
   },
   {
-    title: "Premium",
+    title: "Pro",
     popular: 1,
-    price: 45,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+    price: 29,
+    description: "Comprehensive coding education for serious learners",
+    buttonText: "Unlock Pro Learning",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "Full course library",
+      "Advanced coding workshops",
+      "Personal mentor sessions",
+      "Certification tracks",
+      "Unlimited AI code review",
+      "Project portfolio support",
     ],
   },
   {
     title: "Enterprise",
     popular: 0,
-    price: 120,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+    price: 99,
+    description: "Team and corporate coding education solutions",
+    buttonText: "Contact Sales",
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      "Team learning platform",
+      "Custom curriculum design",
+      "Enterprise-wide licenses",
+      "Advanced analytics",
+      "Dedicated support team",
+      "Corporate training programs",
     ],
   },
 ];
@@ -75,15 +75,15 @@ export const PricingSection = () => {
   return (
     <section className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Pricing
+        ZK | Coding Academy
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        Get unlimitted access
+        Learning Paths for Every Coder
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
-        Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+        Choose a plan that accelerates your coding journey and skills
       </h3>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
@@ -122,14 +122,16 @@ export const PricingSection = () => {
               </CardContent>
 
               <CardFooter>
-                <Button
-                  variant={
-                    popular === PopularPlan?.YES ? "default" : "secondary"
-                  }
-                  className="w-full"
-                >
-                  {buttonText}
-                </Button>
+                <Link href="/login" className="w-full">
+                  <Button
+                    variant={
+                      popular === PopularPlan?.YES ? "default" : "secondary"
+                    }
+                    className="w-full"
+                  >
+                    {buttonText}
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           )

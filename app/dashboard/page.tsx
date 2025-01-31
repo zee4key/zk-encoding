@@ -25,6 +25,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Skeleton } from "@/components/ui/skeleton";
+import { useState, useEffect } from "react";
 
 // Mock data for performance metrics
 const performanceData = [
@@ -61,6 +63,14 @@ const statistics = [
 
 export default function DashboardPage() {
   const { theme } = useTheme();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div
@@ -161,17 +171,33 @@ export default function DashboardPage() {
       {/* Current Courses */}
       <h3 className="text-2xl font-bold tracking-tight mt-8">Your Courses</h3>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {courses.map((course) => (
-          <Card key={course.id} className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle className="text-lg">{course.title}</CardTitle>
-              <CardDescription>Progress: {course.progress}%</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Progress value={course.progress} className="w-full" />
-            </CardContent>
-          </Card>
-        ))}
+        {loading ? (
+          <>
+            {[1, 2, 3, 4].map((index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <Skeleton className="h-6 w-3/4" />
+                  <Skeleton className="h-4 w-1/2 mt-2" />
+                </CardHeader>
+                <CardContent>
+                  <Skeleton className="h-4 w-full" />
+                </CardContent>
+              </Card>
+            ))}
+          </>
+        ) : (
+          courses.map((course) => (
+            <Card key={course.id} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-lg">{course.title}</CardTitle>
+                <CardDescription>Progress: {course.progress}%</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <Progress value={course.progress} className="w-full" />
+              </CardContent>
+            </Card>
+          ))
+        )}
       </div>
     </div>
   );

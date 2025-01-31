@@ -16,6 +16,8 @@ import { Label } from "@/components/ui/label";
 import { useTheme } from "next-themes";
 import { useAuth } from "@/services/authContext";
 import { authService } from "@/services/authService";
+import Link from "next/link";
+
 export default function LoginPage() {
   const { theme } = useTheme();
   const [username, setUsername] = useState("");
@@ -81,7 +83,10 @@ export default function LoginPage() {
               </div>
             </div>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex flex-col gap-4 items-start">
+            <Link href="/signup" className="text-sm text-left">
+              Create an account
+            </Link>
             <Button className="w-full">Login</Button>
           </CardFooter>
         </form>

@@ -51,7 +51,7 @@ export function DashboardHeader() {
               <Button variant="ghost" className="relative h-8 w-8 rounded-full">
                 <Avatar className="h-8 w-8">
                   <AvatarImage src="/placeholder-avatar.jpg" alt="@username" />
-                  <AvatarFallback>UN</AvatarFallback>
+                  <AvatarFallback>ZK</AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
@@ -59,10 +59,10 @@ export function DashboardHeader() {
               <DropdownMenuLabel className="font-normal">
                 <div className="flex flex-col space-y-1">
                   <p className="text-sm font-medium leading-none">
-                    {user?.username || "User"}
+                    {user?.username || "zee4key"}
                   </p>
                   <p className="text-xs leading-none text-muted-foreground">
-                    {user?.email || "user@example.com"}
+                    {user?.email || "zeefourkey@gmail.com"}
                   </p>
                 </div>
               </DropdownMenuLabel>

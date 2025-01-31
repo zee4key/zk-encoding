@@ -44,9 +44,9 @@ export const TeamSection = () => {
       ],
     },
     {
-      imageUrl: "https://i.pravatar.cc/250?img=58",
-      firstName: "Qairbulat",
-      lastName: "Ayan",
+      imageUrl: "/ayashka.jpg",
+      firstName: "Ayan",
+      lastName: "Qairbulat",
       positions: ["Frotend Developer", "Creator Of This Landing Page"],
       socialNetworks: [
         {

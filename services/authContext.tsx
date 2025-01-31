@@ -15,7 +15,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const login = (token: string) => {
     localStorage.setItem("token", token);
-    setUser({ token }); // You can decode JWT here to get user info
+    // Assuming we fetch user data after setting the token
+    // You might want to implement this part based on your API
+    const userData = {
+      /* fetch user data using the token */
+    };
+    setUser(userData);
   };
 
   const logout = () => {
@@ -31,7 +36,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     </AuthContext.Provider>
   );
 }
-
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) throw new Error("useAuth must be used within AuthProvider");

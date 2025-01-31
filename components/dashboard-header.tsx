@@ -14,9 +14,19 @@ import {
 import { CircleDollarSign, User } from "lucide-react";
 import { ToggleTheme } from "./layout/toogle-theme";
 import { useTheme } from "next-themes";
-
+import { useAuth } from "@/services/authContext";
+import { authService } from "@/services/authService";
+import { useRouter } from "next/navigation";
 export function DashboardHeader() {
   const { theme } = useTheme();
+  const { user, logout } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    authService.logout();
+    logout();
+    router.push("/login");
+  };
 
   return (
     <header className="border-b border-gray-300 bg-background">
@@ -48,9 +58,11 @@ export function DashboardHeader() {
             <DropdownMenuContent className="w-56" align="end" forceMount>
               <DropdownMenuLabel className="font-normal">
                 <div className="flex flex-col space-y-1">
-                  <p className="text-sm font-medium leading-none">username</p>
+                  <p className="text-sm font-medium leading-none">
+                    {user?.username || "User"}
+                  </p>
                   <p className="text-xs leading-none text-muted-foreground">
-                    user@example.com
+                    {user?.email || "user@example.com"}
                   </p>
                 </div>
               </DropdownMenuLabel>
@@ -61,7 +73,9 @@ export function DashboardHeader() {
               </DropdownMenuItem>
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => {}}>Log out</DropdownMenuItem>
+              <DropdownMenuItem onClick={handleLogout}>
+                Log out
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <ToggleTheme />

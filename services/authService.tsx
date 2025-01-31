@@ -9,9 +9,9 @@ export const authService = {
       username,
       password,
     });
-    const token = response.data;
-    Cookies.set("token", token); // Store token in cookies
-    return token;
+    const { token, user } = response.data; // Expect user data from backend
+    Cookies.set("token", token);
+    return { token, user }; // Return both token and user data
   },
 
   async signup(username: string, email: string, password: string) {
